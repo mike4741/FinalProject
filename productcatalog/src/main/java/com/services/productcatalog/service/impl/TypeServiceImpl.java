@@ -9,6 +9,7 @@ import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 @Service
 public class TypeServiceImpl  implements TypeService {
@@ -31,8 +32,6 @@ public class TypeServiceImpl  implements TypeService {
         return mapToDTO(newType);
 
     }
-
-
 
     @Override
     public TypeDto getTypeById(long typeId) {

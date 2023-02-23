@@ -5,7 +5,7 @@ import com.services.productcatalog.model.Type;
 
 import java.util.List;
 
-public interface TypeService {
+public interface TypeService  {
 
 
     TypeDto createType(TypeDto typeDto);

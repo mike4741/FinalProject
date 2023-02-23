@@ -14,9 +14,9 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class CatalogItem {
+public class Item {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
     @NonNull
     String name;

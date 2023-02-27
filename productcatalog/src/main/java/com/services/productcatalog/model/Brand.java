@@ -1,12 +1,12 @@
 package com.services.productcatalog.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Slf4j
@@ -23,5 +23,9 @@ public class Brand {
     int id ;
     @NonNull
     String brand ;
+
+
+//    @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL)
+//    Set<Item> items = new LinkedHashSet<>();
 
 }

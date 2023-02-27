@@ -5,6 +5,9 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 @Entity
 @Slf4j
 @NoArgsConstructor
@@ -22,16 +25,18 @@ public class Item {
     String name;
     String description;
     @NonNull
-    Double price;
+    float price;
     @NonNull
     String pictureURL;
+
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "type_id", nullable = false)
-    Type type;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "brand_id", nullable = false)
+    @JoinColumn(name = "brand_id")
     Brand brand;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "type_id")
+    Type type;
 
 
 }

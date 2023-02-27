@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin
+//@CrossOrigin(value = "http://localhost:5503/**")
+@CrossOrigin(origins = "http://127.0.0.1:5503")
 @RestController
 @RequestMapping("/api/")
 public class BrandController {

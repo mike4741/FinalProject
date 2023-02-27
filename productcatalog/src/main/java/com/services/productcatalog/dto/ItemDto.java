@@ -15,11 +15,12 @@ public class ItemDto {
     String name;
     String description;
     @NotEmpty (message = "price should not be empty ")
-    Double price;
+    float price;
     @NotEmpty (message = "pictureURL should not be empty ")
     String pictureURL;
-    @NotEmpty (message = "type should not be empty ")
-    int typeId;
-    @NotEmpty(message = "brand should not be empty ")
-    int brandId;
+
+    long brandId;
+    long typeId;
+
+
 }
